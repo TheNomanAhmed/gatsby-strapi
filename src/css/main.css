@@ -41,7 +41,7 @@ Variables
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.2s linear;
-  --spacing: 0.2rem;
+  --spacing: 0.1rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -105,6 +105,10 @@ h3 {
 
 h4 {
   font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.95rem;
 }
 
 p {
@@ -592,9 +596,10 @@ Services
   /* color: var(--clr-primary-9); */
 }
 
+/* 
 .service:hover p {
-  /* color: var(--clr-primary-9); */
-}
+  color: var(--clr-primary-9);
+} */
 
 .service:hover .service-icon {
   color: var(--clr-primary-4);
@@ -644,12 +649,13 @@ Jobs
   border-color: transparent;
   text-transform: capitalize;
   font-size: 1.25rem;
-  letter-spacing: var(--spacing);
+  /* letter-spacing: var(--spacing); */
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
+
 }
 
 .job-btn:hover {
@@ -657,25 +663,31 @@ Jobs
   box-shadow: 0 2px var(--clr-primary-5);
 }
 
+.job-btn:focus {
+  outline: none;
+}
+
 .active-btn {
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
 }
 
+/* 
 .job-info {
-  /* min-height: 420px; */
-}
+  min-height: 420px;
+} */
 
 .job-info h3 {
   font-weight: 400;
 }
 
-.job-info h4 {
+.job-info h5 {
   text-transform: uppercase;
   color: var(--clr-grey-5);
   background: var(--clr-grey-9);
   display: inline-block;
-  padding: 0.375rem 0.75rem;
+  padding: 0.175rem 0.75rem;
+  margin-bottom: 5px;
   border-radius: var(--radius);
 }
 
@@ -686,7 +698,7 @@ Jobs
 .job-desc {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 2rem;
+  column-gap: 1rem;
   align-items: center;
   margin-bottom: 1.25rem;
 }
