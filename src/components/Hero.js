@@ -27,7 +27,13 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h2>Hello👋 I'm Noman</h2>
+            <h2>
+              Hello
+              <span role="img" aria-label="wave">
+                👋
+              </span>{" "}
+              I'm Noman
+            </h2>
             <h4>I am a freelance developer based in Finland</h4>
             <Link to="/contact" className="btn">
               Contact me
