@@ -1,8 +1,9 @@
 import React from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Hero = () => {
   const {
@@ -37,9 +38,12 @@ const Hero = () => {
               I am a freelance developer based in Finland
             </h4>
             <div className="hero-btn">
-              <Link to="/contact" className="btn">
+              <AniLink cover to="/contact" bg="#52d1da" className="btn">
                 Contact me
-              </Link>
+              </AniLink>
+              {/* <Link to="/contact" className="btn">
+                Contact me
+              </Link> */}
             </div>
             <SocialLinks />
           </div>

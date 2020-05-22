@@ -69,7 +69,6 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
-  margin-top: 5rem;
 }
 
 ul {
@@ -286,7 +285,7 @@ Navbar
 */
 
 .navbar {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -945,6 +944,7 @@ Projects
 Blog
 ===============
 */
+
 .blog {
   display: block;
   margin-bottom: 2rem;
@@ -1073,7 +1073,7 @@ Pages
 .error-page,
 .about-page,
 .contact-page {
-  background: var(--clr-grey-10);
+  /* background: var(--clr-grey-10); */
   min-height: calc(100vh - 5rem - 9rem);
 }
 
@@ -1095,9 +1095,6 @@ Pages
 Blog Page
 ===============
 */
-.blog-page .blog {
-  background: var(--clr-white);
-}
 
 /*
 ===============
@@ -1286,3 +1283,151 @@ Blog Template
   height: 15rem;
   margin: 3rem 0;
 }
+
+/* Card Design */
+
+/*! CSS Used from: Embedded */
+/* a,
+article,
+div,
+h2,
+img,
+p,
+span {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+} */
+/* 
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+img {
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+}
+
+.button:after,
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  opacity: 1;
+  -webkit-transform: translate(-105%);
+  transform: translate(-105%);
+  background-color: hsla(0, 0%, 100%, .25);
+}
+
+.button:before {
+  -webkit-transition-delay: .25s;
+  transition-delay: .25s;
+}
+
+.button--md {
+  font-size: 14px;
+  line-height: 30px;
+  padding: 10px 30px;
+}
+
+.button--primary {
+  background-image: linear-gradient(45deg, #2a92ef, #2a92ef);
+}
+
+.button:hover:after,
+.button:hover:before {
+  opacity: 0;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+} */
+
+.blog .card {
+  border-radius: 12px;
+  position: relative;
+  /* text-align: center; */
+  color: var(--clr-primary-5);
+  display: block;
+  text-decoration: none;
+  box-shadow: 0 5px 35px rgba(166, 209, 237, 0.2);
+  background-color: #fff;
+  height: 100%;
+}
+
+.blog .card:after {
+  content: "";
+  visibility: hidden;
+  background-image: linear-gradient(45deg, var(--clr-primary-7), #47f1b2);
+  width: 95%;
+  height: 95%;
+  z-index: -1;
+  position: absolute;
+  top: auto;
+  bottom: 1px;
+  left: 1px;
+  border-radius: 12px;
+  background-repeat: repeat-x;
+  outline: 1px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.3s;
+}
+
+.blog .card:hover:after {
+  visibility: visible;
+  -webkit-transform: rotate(2deg) translateX(-5px) translateY(16px);
+  transform: rotate(2deg) translateX(-5px) translateY(16px);
+}
+
+/* 
+.card__icon {
+  padding: 56px 30px 0;
+}
+
+.card__body {
+  padding: 20px 30px;
+}
+
+.card__title {
+  font-size: 24px;
+  font-family: Fira Sans Bold, Arial, sans-serif;
+}
+
+.card__content {
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+} 
+
+.card__button {
+  display: block;
+  text-align: center;
+  margin: 15px 0 0;
+}
+*/

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Jobs = () => {
   const {
@@ -59,9 +59,12 @@ const Jobs = () => {
         </article>
       </div>
       <div className="center-btn">
-        <Link to="/about" className="btn center-btn">
+        <AniLink cover to="/about" bg="#52d1da" className="btn">
           More info
-        </Link>
+        </AniLink>
+        {/* <Link to="/about" className="btn center-btn">
+          More info
+        </Link> */}
       </div>
     </section>
   )

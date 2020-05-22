@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Projects = ({ projects, title, showLink }) => {
   return (
@@ -14,10 +14,13 @@ const Projects = ({ projects, title, showLink }) => {
       </div>
       {showLink && (
         <div className="center-btn">
-          <Link to="/projects" className="btn">
-            {" "}
+          <AniLink cover to="/projects" bg="#52d1da" className="btn">
             Projects
-          </Link>
+          </AniLink>
+          {/* <Link to="/projects" className="btn">
+            
+            Projects
+          </Link> */}
         </div>
       )}
     </section>
