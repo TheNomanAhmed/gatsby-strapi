@@ -28,7 +28,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:8082`,
+        apiURL: process.env.DEPLOY_URL
+          ? `https://noman-strapi-postgres.herokuapp.com`
+          : `http://localhost:8082`,
+        // apiURL: `http://localhost:8082`,
         queryLimit: 1000, // Default to 100
         // contentTypes: [`jobs`, `projects`, `blogs`, ],
         //singleTypes:[`about` ]

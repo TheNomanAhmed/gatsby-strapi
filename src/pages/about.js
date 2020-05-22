@@ -36,7 +36,6 @@ const About = ({
   return (
     <Layout>
       <SEO title="About" description="About Noman Ahmed KHan" />
-
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />
