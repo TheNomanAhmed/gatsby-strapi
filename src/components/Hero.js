@@ -26,7 +26,6 @@ const Hero = () => {
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
-            <div className="underline"></div>
             <h2>
               Hello
               <span role="img" aria-label="wave">
@@ -34,7 +33,9 @@ const Hero = () => {
               </span>{" "}
               I'm Noman
             </h2>
-            <h4>I am a freelance developer based in Finland</h4>
+            <h4 className="tagline">
+              I am a freelance developer based in Finland
+            </h4>
             <div className="hero-btn">
               <Link to="/contact" className="btn">
                 Contact me

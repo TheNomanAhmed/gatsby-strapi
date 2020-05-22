@@ -11,7 +11,7 @@ const Navbar = ({ toggleSidebar }) => {
         <div className="nav-header">
           {/* <img src={logo} alt="logo" /> */}
           <Link to="/">
-            <h2 className="logo">noman</h2>
+            <h2 className="logo">noman.</h2>
           </Link>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight></FaAlignRight>

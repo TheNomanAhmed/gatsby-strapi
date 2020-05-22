@@ -8,9 +8,9 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
     <article className="project">
       <Image fluid={image.childImageSharp.fluid} className="project-img" />
       <div className="project-info">
-        <span className="project-number">0{index}.</span>
+        {/* <span className="project-number">0{index}.</span> */}
         <h3>{title}</h3>
-        <p className="project-description">{description}</p>
+        <p className="project-desc">{description}</p>
         <div className="project-stack">
           {stack.map(item => {
             return <span key={item.id}>{item.title}</span>
