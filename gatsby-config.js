@@ -44,8 +44,25 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            variants: [`400`, `700`],
+            family: `Muli`,
+            variants: [
+              `200`,
+              `200i`,
+              `300`,
+              `300i`,
+              `400`,
+              `400i`,
+              `500`,
+              `500i`,
+              `600`,
+              `600i`,
+              `700`,
+              `700i`,
+              `800`,
+              `800i`,
+              `900`,
+              `900i`,
+            ],
           },
           {
             family: `Open Sans`,

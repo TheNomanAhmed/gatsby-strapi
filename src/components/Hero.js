@@ -35,9 +35,11 @@ const Hero = () => {
               I'm Noman
             </h2>
             <h4>I am a freelance developer based in Finland</h4>
-            <Link to="/contact" className="btn">
-              Contact me
-            </Link>
+            <div className="hero-btn">
+              <Link to="/contact" className="btn">
+                Contact me
+              </Link>
+            </div>
             <SocialLinks />
           </div>
         </article>

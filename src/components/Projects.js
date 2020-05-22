@@ -13,10 +13,12 @@ const Projects = ({ projects, title, showLink }) => {
         })}
       </div>
       {showLink && (
-        <Link to="/projects" className="btn center-btn">
-          {" "}
-          Projects
-        </Link>
+        <div className="center-btn">
+          <Link to="/projects" className="btn">
+            {" "}
+            Projects
+          </Link>
+        </div>
       )}
     </section>
   )
