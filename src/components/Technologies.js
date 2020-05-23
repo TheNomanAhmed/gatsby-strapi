@@ -20,7 +20,7 @@ import illustrator from "../assets/illustrator.svg"
 const Technologies = () => {
   return (
     <section className="section ">
-      <div className="section-center">
+      <div className="section-center ">
         <Title title="Technologies i use" />
         <div className="all-cards ">
           <div className="tech-card-wrapper">
