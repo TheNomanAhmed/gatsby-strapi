@@ -4,7 +4,9 @@ Fonts
 ===============
 */
 /* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
-
+/* @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+ */
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 /*
 =============== 
 Variables
@@ -48,8 +50,11 @@ Variables
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-white: #fff;
+  /* font family */
   --ff-primary: "Muli", sans-serif;
   --ff-secondary: "Yeseva One", sans-serif;
+  --ff-blog: "Handlee", sans-serif;
+
   --transition: all 0.2s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -91,11 +96,12 @@ a {
 
 h1,
 h3,
-h4 {
+h4,
+h5 {
   /* letter-spacing: var(--spacing); */
   /* text-transform: capitalize; */
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
+  /* line-height: 1.25; */
+  line-height: 1.625;
   font-family: var(--ff-primary);
 }
 
@@ -156,36 +162,15 @@ p {
   body {
     font-size: 1rem;
   }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
 }
 
 /*  global classes */
 
 .btn {
-  /* text-transform: uppercase;
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-9);
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
-  display: inline-block;
-  font-weight: 700;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  font-size: 0.875rem;
-  border: 2px solid transparent;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius); */
   position: relative;
   border: 3px solid #232323;
   z-index: 1;
-  padding: 8px 8px;
+  padding: 8px 25px;
   margin: auto;
   box-sizing: border-box;
   font-size: 1rem;
@@ -196,8 +181,6 @@ p {
 }
 
 .btn:hover::before {
-  /* color: var(--clr-primary-1);
-  background: var(--clr-primary-8); */
   top: 0;
   left: 0;
   width: 102%;
@@ -248,19 +231,33 @@ p {
   }
 }
 
-/* added during recording */
-/* .underline {
-  width: 5rem;
-  height: 0.25rem;
-  margin-bottom: 1.25rem;
-  background: var(--clr-primary-5);
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 .section-title {
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
   text-align: center;
+}
+
+.section-title h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.section-title h2:hover::before {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0em;
+  bottom: 0.05em;
+  width: 70%;
+  height: 0.6em;
+  background: var(--clr-primary-8);
+  transform-origin: right;
+  transition: transform 0.15s;
 }
 
 .bg-grey {
@@ -390,7 +387,7 @@ Sidebar
 ===============
 */
 .sidebar {
-  background: var(--clr-grey-10);
+  background: var(--clr-primary-10);
   position: fixed;
   top: 0;
   left: 0;
@@ -417,7 +414,7 @@ Sidebar
   display: block;
   text-align: center;
   text-transform: capitalize;
-  color: var(--clr-grey-5);
+  color: var(--clr-primary-5);
   letter-spacing: var(--spacing);
   margin-bottom: 0.5rem;
   font-size: 2rem;
@@ -437,7 +434,7 @@ Sidebar
   font-size: 2.5rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-red-dark);
+  color: var(--clr-primary-5);
   cursor: pointer;
 }
 
@@ -453,27 +450,27 @@ Sidebar Animation
 ===============
 */
 .sidebar-links li {
-  animation: slideRight 0.5s ease-in-out 0.3s forwards;
+  animation: slideRight 0.2s ease-in-out 0.3s forwards;
 }
 
 .sidebar-links li:nth-of-type(1) {
-  animation-delay: 0.25s;
+  animation-delay: 0.1s;
 }
 
 .sidebar-links li:nth-of-type(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0.15s;
 }
 
 .sidebar-links li:nth-of-type(3) {
-  animation-delay: 0.75s;
+  animation-delay: 0.2s;
 }
 
 .sidebar-links li:nth-of-type(4) {
-  animation-delay: 1s;
+  animation-delay: 0.25s;
 }
 
 .sidebar-links li:nth-of-type(5) {
-  animation-delay: 1.25s;
+  animation-delay: 0.3s;
 }
 
 @keyframes slideRight {
@@ -494,23 +491,23 @@ Sidebar Animation
 }
 
 .sidebar-icons li:nth-of-type(1) {
-  animation-delay: 0.25s;
+  animation-delay: 0.1s;
 }
 
 .sidebar-icons li:nth-of-type(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0.15s;
 }
 
 .sidebar-icons li:nth-of-type(3) {
-  animation-delay: 0.75s;
+  animation-delay: 0.2s;
 }
 
 .sidebar-icons li:nth-of-type(4) {
-  animation-delay: 1s;
+  animation-delay: 0.25s;
 }
 
 .sidebar-icons li:nth-of-type(5) {
-  animation-delay: 1.25s;
+  animation-delay: 0.3s;
 }
 
 @keyframes slideUp {
@@ -636,13 +633,14 @@ Services
 */
 .service {
   background: var(--clr-white);
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
+  height: auto;
   margin-bottom: 2rem;
   border-radius: var(--radius);
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  border-top: 2px solid transparent;
+  border-top: 3px solid transparent;
 }
 
 .service-icon {
@@ -658,21 +656,21 @@ Services
 } */
 
 .service p {
+  padding-top: 10px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
 .service:hover {
-  border-top: 2px solid var(--clr-primary-4);
+  border-top: 3px solid var(--clr-primary-6);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   /* color: var(--clr-primary-9); */
 }
 
-/* 
-.service:hover p {
-  color: var(--clr-primary-9);
-} */
+.service h4 {
+  padding-top: 10px;
+}
 
 .service:hover .service-icon {
   color: var(--clr-primary-4);
@@ -682,7 +680,7 @@ Services
   background: var(--clr-primary-4);
 }
 
-@media screen and (min-width: 676px) {
+@media screen and (min-width: 500px) {
   .services-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -760,6 +758,7 @@ Jobs
   display: inline-block;
   padding: 0.175rem 0.75rem;
   margin-bottom: 5px;
+  margin-top: 6px;
   border-radius: var(--radius);
 }
 
@@ -1253,38 +1252,83 @@ Contact Page
 Blog Template
 ===============
 */
-.blog-template {
+.blog-content .blog-btn {
+  width: 100%;
+}
+
+.blog-content {
   padding: 5rem 0;
+  font-family: var(--ff-blog);
 }
 
-.blog-template h1,
-.blog-template h2 {
-  text-align: center;
+.blog-content p {
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
-.blog-template ul {
-  margin-top: 2rem;
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  line-height: 1.625;
+  text-align: left;
+  color: var(--clr-primary-1);
+  font-family: var(--ff-blog);
+}
+
+.blog-content ul {
+  font-size: 1.5rem;
   display: inline-block;
+  padding: 0.5em 1em 0.5em 2.3em;
+  position: relative;
 }
 
-.blog-template ul li {
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
-  padding: 0.5rem 1rem;
-  margin: 1rem 0;
-  text-transform: uppercase;
+.blog-content ul li {
+  line-height: 1.5;
+  padding: 0.2em 0.5em;
+  list-style-type: disc;
 }
 
-.blog-template blockquote {
-  background: var(--clr-primary-9);
-  border-radius: var(--radius);
-  padding: 1rem;
-  line-height: 2;
-  color: var(--clr-primary-5);
-  margin: 2rem 0;
+.blog-content blockquote {
+  display: block;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--clr-primary-3);
+  text-align: justify;
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-secondary-9),
+    var(--clr-primary-10)
+  );
+  background-attachment: fixed;
+  background-clip: border-box;
+  border-left: 2px solid var(--clr-primary-5);
 }
 
-.blog-template pre {
+.blog-content blockquote p {
+  margin-bottom: 0;
+}
+
+.blog-content blockquote::before {
+  content: "\201C";
+
+  font-family: var(--ff-primary);
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--clr-primary-8);
+
+  /*Positioning*/
+  position: absolute;
+  left: 12px;
+  top: 0px;
+}
+
+.blog-content pre {
   background: #222;
   color: yellow;
   overflow-x: scroll;
@@ -1292,96 +1336,42 @@ Blog Template
   border-radius: var(--radius);
 }
 
-.blog-template img {
-  width: 15rem;
-  height: 15rem;
-  margin: 3rem 0;
+.blog-content img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  /* margin: auto; */
 }
 
-/* Card Design */
+/* Media queries for Blog Template  */
 
-/*! CSS Used from: Embedded */
-/* a,
-article,
-div,
-h2,
-img,
-p,
-span {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-} */
-/* 
-*,
-:after,
-:before {
-  box-sizing: inherit;
+@media screen and (max-width: 768px) {
+  .blog-content img {
+    width: 100%;
+  }
 }
 
-img {
-  border: 0;
+@media screen and (max-width: 640px) {
+  .blog-content p {
+    font-size: 1.2rem;
+  }
+
+  .blog-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .blog-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .blog-content ul {
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+  }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.button {
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  font-weight: 500;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  border-radius: 50px;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-decoration: none;
-  outline: none;
-  overflow: hidden;
-}
-
-.button:after,
-.button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-  opacity: 1;
-  -webkit-transform: translate(-105%);
-  transform: translate(-105%);
-  background-color: hsla(0, 0%, 100%, .25);
-}
-
-.button:before {
-  -webkit-transition-delay: .25s;
-  transition-delay: .25s;
-}
-
-.button--md {
-  font-size: 14px;
-  line-height: 30px;
-  padding: 10px 30px;
-}
-
-.button--primary {
-  background-image: linear-gradient(45deg, #2a92ef, #2a92ef);
-}
-
-.button:hover:after,
-.button:hover:before {
-  opacity: 0;
-  -webkit-transform: translate(0);
-  transform: translate(0);
-} */
+/* Blog Card */
 
 .blog .card {
   border-radius: 12px;

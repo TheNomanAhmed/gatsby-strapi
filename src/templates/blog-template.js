@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
+import { FaArrowLeft } from "react-icons/fa"
 
 const ComponentName = ({ data }) => {
   const { content, title, desc } = data.blog
@@ -13,10 +14,10 @@ const ComponentName = ({ data }) => {
         <div className="section-center">
           <article className="blog-content">
             <ReactMarkdown source={content} />
+            <Link to="/blog" className="btn blog-btn">
+              <FaArrowLeft /> Blogs
+            </Link>
           </article>
-          <Link to="/blog" className="btn center-btn">
-            Blog
-          </Link>
         </div>
       </section>
     </Layout>
