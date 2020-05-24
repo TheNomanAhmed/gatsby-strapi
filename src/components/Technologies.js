@@ -63,11 +63,6 @@ const Technologies = () => {
             </div>
           </div>
           <div className="tech-card-wrapper">
-            {/* <div className="css-1jjzhxu epr1bjy1">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div> */}
             <div className="tech-card-content">
               <h3>Tools</h3>
               <a
@@ -101,11 +96,6 @@ const Technologies = () => {
             </div>
           </div>
           <div className="tech-card-wrapper">
-            {/* <div className="css-1jjzhxu epr1bjy1">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div> */}
             <div className="tech-card-content">
               <h3>Deploy</h3>
               <a
@@ -145,11 +135,6 @@ const Technologies = () => {
           {/* Design Logos */}
 
           <div className="tech-card-wrapper">
-            {/* <div className="css-1jjzhxu epr1bjy1">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div> */}
             <div className="tech-card-content">
               <h3>Design</h3>
               <a
