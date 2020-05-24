@@ -1,9 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
     title: "Noman Ahmed Khan portfolio",
@@ -11,7 +5,7 @@ module.exports = {
     author: "@webdev",
     twitterUsername: "@thenomanahmed",
     image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://strapicms.netlify.app",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -19,6 +13,18 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Strapi Gatsby`,
+        short_name: `strapi`,
+        start_url: `/`,
+        background_color: `#E0FCFF`,
+        theme_color: `#52D1DA`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,10 +38,7 @@ module.exports = {
         apiURL: process.env.DEPLOY_URL
           ? `https://noman-strapi-postgres.herokuapp.com`
           : `http://localhost:8082`,
-        // apiURL: `http://localhost:8082`,
-        queryLimit: 1000, // Default to 100
-        // contentTypes: [`jobs`, `projects`, `blogs`, ],
-        //singleTypes:[`about` ]
+        queryLimit: 1000,
         contentTypes: [`jobs`, `projects`, `blogs`],
         singleTypes: [`about`],
       },
@@ -46,42 +49,16 @@ module.exports = {
         fonts: [
           `muli\:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i`,
           `open sans`,
-          `Yeseva One`, // you can also specify font weights and styles
+          `Yeseva One`,
         ],
         display: "swap",
       },
     },
-
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Muli`,
-    //         variants: [
-    //           `200`,
-    //           `200i`,
-    //           `300`,
-    //           `300i`,
-    //           `400`,
-    //           `400i`,
-    //           `500`,
-    //           `500i`,
-    //           `600`,
-    //           `600i`,
-    //           `700`,
-    //           `700i`,
-    //           `800`,
-    //           `800i`,
-    //           `900`,
-    //           `900i`,
-    //         ],
-    //       },
-    //       {
-    //         family: `Open Sans`,
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about/`, `/contact/`, `/blog/*`],
+      },
+    },
   ],
 }
