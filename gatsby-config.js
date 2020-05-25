@@ -54,11 +54,23 @@ module.exports = {
         display: "swap",
       },
     },
-    {
+    
+    {      
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/about/`, `/contact/`, `/blog/*`],
+
       },
     },
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: ["/", { regex: "^/blogs" }],
+        // excludePaths: ["/blog/beep-beep-lettuce"],
+        height: 3,
+        prependToBody: false,
+        color: `#52D1DA`,
+    },
+  },
   ],
 }
