@@ -830,18 +830,6 @@ Projects
   z-index: 1;
 }
 
-.project-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, var(--clr-primary-5), #47f1b2);
-  opacity: 0.55;
-  transition: var(--transition);
-}
-
 .project:hover .project-img::after {
   opacity: 0;
 }
@@ -881,6 +869,7 @@ Projects
   background: var(--clr-grey-9);
   color: var(--clr-grey-2);
   margin-right: 0.5rem;
+  margin-top: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   text-transform: uppercase;
@@ -905,24 +894,36 @@ Projects
 
 @media screen and (min-width: 576px) {
   .project-img {
-    height: 19rem;
+    height: 26rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .project-img {
-    height: 22rem;
+    height: 30rem;
   }
 }
 
 @media screen and (min-width: 992px) {
+  .project-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, var(--clr-primary-5), #47f1b2);
+    opacity: 0.55;
+    transition: var(--transition);
+  }
+
   .project {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
   }
 
   .project-img {
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 7;
     /* grid-column-end: 8; */
     grid-row: 1 / 1;
     height: 30rem;
@@ -935,17 +936,17 @@ Projects
     box-shadow: var(--dark-shadow);
 
     z-index: 1;
-    grid-column: 5 /12;
+    grid-column: 7 /13;
     grid-row: 1 / 1;
   }
 
   .project:nth-of-type(even) .project-img {
-    grid-column: 5 / -1;
+    grid-column: 6 / -1;
     grid-row: 1 / 1;
   }
 
   .project:nth-of-type(even) .project-info {
-    grid-column: 2 / span 7;
+    grid-column: 1 / span 6;
     grid-row: 1 / 1;
     text-align: left;
   }
@@ -1313,6 +1314,7 @@ ol {
   padding: 0.2em 0.5em;
   list-style-type: disc;
 }
+
 .blog-content ol li {
   line-height: 1.5;
   padding: 0.2em 0.5em;
@@ -1440,7 +1442,7 @@ ol {
 .tech-card-wrapper {
   border: none;
   width: 100%;
-  max-width: 371px;
+  max-width: 230px;
   background-color: rgb(255, 255, 255);
   border-radius: 18px;
   margin-bottom: 32px;
@@ -1518,5 +1520,11 @@ ol {
 @media (hover: hover) {
   .tech-card-content > a > img:hover {
     filter: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-card-content {
+    filter: grayscale(0%);
   }
 }

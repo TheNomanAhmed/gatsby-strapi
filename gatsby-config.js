@@ -51,37 +51,15 @@ module.exports = {
         display: "swap",
       },
     },
-
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Muli`,
-    //         variants: [
-    //           `200`,
-    //           `200i`,
-    //           `300`,
-    //           `300i`,
-    //           `400`,
-    //           `400i`,
-    //           `500`,
-    //           `500i`,
-    //           `600`,
-    //           `600i`,
-    //           `700`,
-    //           `700i`,
-    //           `800`,
-    //           `800i`,
-    //           `900`,
-    //           `900i`,
-    //         ],
-    //       },
-    //       {
-    //         family: `Open Sans`,
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: ["/", { regex: "^/blogs" }],
+        // excludePaths: ["/blog/beep-beep-lettuce"],
+        height: 3,
+        prependToBody: false,
+        color: `#52D1DA`,
+      },
+    },
   ],
 }
