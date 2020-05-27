@@ -1,18 +1,17 @@
 import React from "react"
 import {
-  FaFacebookSquare,
   FaLinkedin,
-  FaDribbbleSquare,
   FaBehanceSquare,
   FaTwitterSquare,
+  FaGithubSquare,
 } from "react-icons/fa"
 
 const data = [
   {
     id: 1,
-    label: "facebok logo",
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.facebook.com/TheNomanAhmed",
+    label: "github logo",
+    icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
+    url: "https://github.com/TheNomanAhmed",
   },
   {
     id: 2,
@@ -21,16 +20,10 @@ const data = [
     url: "https://www.linkedin.com/in/TheNomanAhmed",
   },
   {
-    id: 3,
-    label: "Dribbble logo",
-    icon: <FaDribbbleSquare className="social-icon"></FaDribbbleSquare>,
-    url: "https://www.dribbble.com/TheNomanAhmed",
-  },
-  {
     id: 4,
     label: "Behance logo",
     icon: <FaBehanceSquare className="social-icon"></FaBehanceSquare>,
-    url: "https://www.behance.com/TheNomanAhmed",
+    url: "https://www.behance.net/TheNomanAhmed",
   },
   {
     id: 5,

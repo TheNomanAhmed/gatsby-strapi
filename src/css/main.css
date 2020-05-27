@@ -570,6 +570,11 @@ Hero
   display: flex;
 }
 
+.hero-info h4 {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
 @media screen and (min-width: 992px) {
   .hero {
     height: fit-content;
@@ -596,16 +601,20 @@ Hero
 
   .hero-info {
     grid-row: 1/1;
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 6;
   }
 
   .hero-img {
     /* right: 0; */
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     display: block;
     grid-row: 1/1;
     grid-column: 6/-1;
+  }
+
+  .hero h4 {
+    line-height: 1.25;
   }
 }
 
@@ -616,11 +625,7 @@ Hero
   }
 
   .hero-info {
-    grid-column: 1 / span 8;
-  }
-
-  .hero h4 {
-    line-height: 1;
+    grid-column: 1 / span 6;
   }
 }
 
