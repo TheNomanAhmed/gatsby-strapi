@@ -54,14 +54,6 @@ module.exports = {
         display: "swap",
       },
     },
-    
-    {      
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/about/`, `/contact/`, `/blog/*`],
-
-      },
-    },
     {
       resolve: "gatsby-plugin-page-progress",
       options: {
@@ -70,7 +62,7 @@ module.exports = {
         height: 3,
         prependToBody: false,
         color: `#52D1DA`,
+      },
     },
-  },
   ],
 }
