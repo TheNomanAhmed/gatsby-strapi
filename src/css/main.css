@@ -1367,7 +1367,7 @@ ol {
   color: yellow;
   overflow-x: scroll;
   padding: 1rem 1.5rem;
-  border-radius: var(--radius);
+  border-radius: 0.5rem;
 }
 
 .blog-content img {

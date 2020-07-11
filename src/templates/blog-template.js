@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
+import CodeBlock from "../components/CodeBlock"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
 import { FaArrowLeft } from "react-icons/fa"
@@ -13,7 +14,7 @@ const ComponentName = ({ data }) => {
       <section className="blog-template">
         <div className="section-center">
           <article className="blog-content">
-            <ReactMarkdown source={content} />
+            <ReactMarkdown source={content} renderers={{ code: CodeBlock }} />
             <Link to="/blog" className="btn blog-btn">
               <FaArrowLeft /> Blogs
             </Link>
