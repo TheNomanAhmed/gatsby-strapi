@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
-import "../css/main.css"
+import "../css/main.scss"
 
 const Blog = ({
   data: {
@@ -31,6 +31,7 @@ export const query = graphql`
         date(formatString: "MMMM Do,YYYY")
         id
         title
+        desc
         image {
           childImageSharp {
             fluid {

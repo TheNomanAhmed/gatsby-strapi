@@ -33,6 +33,8 @@ export const query = graphql`
       nodes {
         description
         github
+        prototypeDesign
+        prototypeLink
         id
         title
         url
@@ -56,6 +58,7 @@ export const query = graphql`
         date(formatString: "MMMM Do,YYYY")
         id
         title
+        desc
         image {
           childImageSharp {
             fluid {

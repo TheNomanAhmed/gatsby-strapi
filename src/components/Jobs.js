@@ -46,7 +46,7 @@ const Jobs = () => {
         {/* job information */}
         <article className="job-info">
           <h3>{position}</h3>
-          <h5>{company}</h5>
+          {/* <h5>{company}</h5> */}
           <p className="job-date">{date}</p>
           {desc.map(item => {
             return (
@@ -59,9 +59,9 @@ const Jobs = () => {
         </article>
       </div>
       <div className="center-btn">
-        <AniLink cover to="/about" bg="#52d1da" className="btn">
+        {/* <AniLink cover to="/about" bg="#52d1da" className="btn">
           More info
-        </AniLink>
+        </AniLink> */}
         {/* <Link to="/about" className="btn center-btn">
           More info
         </Link> */}

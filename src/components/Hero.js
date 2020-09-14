@@ -12,10 +12,10 @@ const Hero = () => {
     },
   } = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "hero-img.png" }) {
+      file(relativePath: { eq: "hero-image.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -27,23 +27,15 @@ const Hero = () => {
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
-            <h2>
-              Hello
-              <span role="img" aria-label="wave">
-                👋
-              </span>{" "}
-              I'm Noman
-            </h2>
+            <h2>noman ahmed.</h2>
             <h4 className="tagline">
-              I help companies deliver delightful digital experiences
+              I like to design and build applications, and everything that's
+              associated with it.
             </h4>
             <div className="hero-btn">
               <AniLink cover to="/projects" bg="#52d1da" className="btn">
                 See Projects
               </AniLink>
-              {/* <Link to="/contact" className="btn">
-                Contact me
-              </Link> */}
             </div>
             <SocialLinks />
           </div>

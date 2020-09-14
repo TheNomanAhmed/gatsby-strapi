@@ -1,16 +1,11 @@
 import React from "react"
-import {
-  FaLinkedin,
-  FaBehanceSquare,
-  FaTwitterSquare,
-  FaGithubSquare,
-} from "react-icons/fa"
+import { FaLinkedin, FaBehance, FaTwitter, FaGithub } from "react-icons/fa"
 
 const data = [
   {
     id: 1,
     label: "github logo",
-    icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
+    icon: <FaGithub className="social-icon"></FaGithub>,
     url: "https://github.com/TheNomanAhmed",
   },
   {
@@ -22,13 +17,13 @@ const data = [
   {
     id: 4,
     label: "Behance logo",
-    icon: <FaBehanceSquare className="social-icon"></FaBehanceSquare>,
+    icon: <FaBehance className="social-icon"></FaBehance>,
     url: "https://www.behance.net/TheNomanAhmed",
   },
   {
     id: 5,
     label: "Twitter logo",
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
+    icon: <FaTwitter className="social-icon"></FaTwitter>,
     url: "https://www.twitter.com/TheNomanAhmed",
   },
 ]

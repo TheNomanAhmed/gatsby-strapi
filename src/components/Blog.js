@@ -9,10 +9,13 @@ const Blog = ({ id, title, image, date, category, slug, desc }) => {
         <Image fluid={image.childImageSharp.fluid} className="blog-img" />
         <div className="blog-card">
           <h4>{title}</h4>
-          <p>{desc}</p>
+          {/* <p className="blog-card-desc">{desc.substring(0, 250)}</p> */}
+          <p className="blog-card-desc">
+            {desc.length > 200 ? `${desc.substring(0, 200)} ...` : desc}
+          </p>
           <div className="blog-footer">
-            <p>{category}</p>
-            <p>{date}</p>
+            <p className={`category ${category}`}>{category}</p>
+            <div className="blog-card-date">{date}</div>
           </div>
         </div>
       </article>

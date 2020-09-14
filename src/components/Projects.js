@@ -7,7 +7,7 @@ const Projects = ({ projects, title, showLink }) => {
   return (
     <section className="section projects">
       <Title title={title} />
-      <div className="section-center projects-center">
+      <div className="section-center projects-list">
         {projects.map((project, index) => {
           return <Project key={project.id} index={index} {...project} />
         })}
@@ -17,10 +17,6 @@ const Projects = ({ projects, title, showLink }) => {
           <AniLink cover to="/projects" bg="#52d1da" className="btn">
             Projects
           </AniLink>
-          {/* <Link to="/projects" className="btn">
-            
-            Projects
-          </Link> */}
         </div>
       )}
     </section>

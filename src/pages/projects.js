@@ -23,6 +23,8 @@ export const query = graphql`
       nodes {
         description
         github
+        prototypeDesign
+        prototypeLink
         id
         title
         url
