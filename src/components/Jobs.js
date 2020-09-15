@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Title from "./Title"
-import { FaAngleDoubleRight } from "react-icons/fa"
+import { FaCaretRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -45,13 +45,13 @@ const Jobs = () => {
         </div>
         {/* job information */}
         <article className="job-info">
-          <h3>{position}</h3>
+          <h4>{position}</h4>
           {/* <h5>{company}</h5> */}
           <p className="job-date">{date}</p>
           {desc.map(item => {
             return (
               <div key={item.id} className="job-desc">
-                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                <FaCaretRight className="job-icon"></FaCaretRight>
                 <p>{item.name}</p>
               </div>
             )

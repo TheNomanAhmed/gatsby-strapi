@@ -720,7 +720,7 @@ Jobs
   text-transform: capitalize;
   font-size: 1.25rem;
   /* letter-spacing: var(--spacing); */
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
   transition: var(--transition);
   cursor: pointer;
   padding: 0.25rem 0;
@@ -730,6 +730,7 @@ Jobs
 .job-btn:hover {
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
+  background-color: #effdff;
 }
 
 .job-btn:focus {
@@ -739,6 +740,7 @@ Jobs
 .active-btn {
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
+  background-color: #effdff;
 }
 
 /* 
@@ -746,8 +748,9 @@ Jobs
   min-height: 420px;
 } */
 
-.job-info h3 {
-  font-weight: 400;
+.job-info h4 {
+  font-weight: 500;
+  color: var(--clr-grey-4);
 }
 
 .job-info h5 {
@@ -797,7 +800,7 @@ Jobs
   }
 
   .job-btn {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .active-btn {
@@ -919,6 +922,11 @@ Projects
   &.Gatsby {
     color: #663399;
     background-color: #f5eaff;
+  }
+
+  &.React {
+    color: #339949;
+    background-color: #eaffea;
   }
 
   &.Contentful {
@@ -1044,42 +1052,42 @@ Blog
     font-size: 12px;
     font-weight: 700;
 
-    &.Gatsby {
+    &.gatsby {
       color: #663399;
       background-color: #f5eaff;
     }
 
-    &.Contentful {
+    &.contentful {
       color: #434190;
       background-color: #ebf4ff;
     }
 
-    &.Netlify {
+    &.netlify {
       color: #2c5282;
       background-color: #ebf8ff;
     }
 
-    &.Heroku {
+    &.heroku {
       color: #2c5282;
       background-color: #ebf8ff;
     }
 
-    &.StrapiCMS {
+    &.strapiCMS {
       color: #276749;
       background-color: #f0fff4;
     }
 
-    &.Tailwind {
+    &.tailwind {
       color: #751c5a;
       background-color: #fbf0ff;
     }
 
-    &.Figma {
+    &.figma {
       color: #2c5282;
       background-color: #f7fafc;
     }
 
-    &.AdobeXD {
+    &.adobexd {
       color: #1b854e;
       background-color: #ebffed;
     }
@@ -1266,16 +1274,16 @@ Contact Page
 
 .contact-form {
   background: var(--clr-white);
-  border-radius: var(--radius);
+  // border-radius: var(--radius);
   text-align: center;
-  box-shadow: var(--light-shadow);
+  // box-shadow: var(--light-shadow);
   transition: var(--transition);
   width: 90vw;
   max-width: 35rem;
 }
 
 .contact-form:hover {
-  box-shadow: var(--dark-shadow);
+  // box-shadow: var(--dark-shadow);
 }
 
 .contact-form h3 {
@@ -1316,7 +1324,9 @@ Contact Page
   text-decoration: none;
   color: var(--clr-primary-1);
   background-color: var(--clr-primary-7);
-  width: 100%;
+  width: 90%;
+  border: none;
+  cursor: pointer;
 }
 
 .submit-btn:hover {
